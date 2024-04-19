@@ -23,8 +23,8 @@ const Inputs = () => {
   }
   return (
     <>
-      <div className="fondo flex justify-center items-center flex-col bg-slate-900 py-10">
-        <h4 className="text-2xl text-amber-100 bg-slate-800 py-3 px-5 rounded-3xl ">Seleccione el descuento que desea aplicar</h4>
+      <div className="fondo flex justify-center items-center flex-col bg-slate-900 py-12">
+        <h4 className="text-md lg:text-2xl text-amber-100 bg-slate-800 py-3 px-5 rounded-3xl ">Seleccione el descuento que desea aplicar</h4>
         <select
           className="w-1/2 border-2 border-gray-300 rounded-md p-2 m-2"
           onChange={(e) => evaluar(e.target.value)}
@@ -44,7 +44,7 @@ const Inputs = () => {
           onChange={(e) => setPorcentaje(e.target.value)}
         />
         <p>{error && error} </p>
-        <h4 className="text-2xl text-amber-100 bg-slate-800 py-3 px-5 rounded-3xl ">Ingrese el precio del producto</h4>
+        <h4 className="text-md lg:text-2xl text-amber-100 bg-slate-800 py-4 px-5 rounded-3xl ">Ingrese el precio del producto</h4>
         <input
           type="number"
           placeholder="Ingrese el precio del producto"
