@@ -14,6 +14,41 @@ const Inputs = () => {
       setError("No pueden ser negativos");
     }
   }
+  function sinInputPorcentaje(number) {
+    var debePagar = 0;
+    var msj = "";
+    switch (porcentaje) {
+      case "trespordos":
+        debePagar = (number * 3) / 2;
+        msj =  `<h2>El total a pagar es: ${debePagar}</h2>
+        <p>Estaria llevando 3 productos al precio de ${debePagar / 3} cada uno</p>
+        `;
+        break;
+      case "ochenta":
+        debePagar =  (number * 80) / 100;
+        msj =  `<h2>El total a pagar es: ${debePagar}</h2>
+        <p>Estaria llevando 2 productos al precio de ${debePagar / 2} cada uno</p>`; 
+        break;
+      case "setenta":
+        debePagar =  (number * 70) / 100;
+        msj =  `<h2>El total a pagar es: ${debePagar}</h2>
+        <p>Estaria llevando 2 productos al precio de ${debePagar / 2} cada uno</p>`; 
+
+        break;
+      case "cincuenta":
+        debePagar =  (number * 50) / 100;
+        msj =  `<h2>El total a pagar es: ${debePagar}</h2>
+        <p>Estaria llevando 2 productos al precio de ${debePagar / 2} cada uno</p>`; 
+        break;
+      case "descuento":
+        debePagar =  (number * porcentaje) / 100;
+        msj =  `<h2>El total a pagar es: ${debePagar}</h2>`;
+        break;
+      default:
+        msj = '<h2>Surgio un erro ren la aplicacion</h2>';
+    }
+    return msj;
+  }
   function evaluar(opcion) {
     if (opcion === "descuento") {
       setHidden(false);
