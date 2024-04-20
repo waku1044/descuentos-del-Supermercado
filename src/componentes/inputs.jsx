@@ -96,7 +96,7 @@ const Inputs = () => {
           onChange={(e) => setPrecio(e.target.value)}
         />
         <p>{{error && error.precio}}</p>
-        <button className="w-1/4  text-slate-900 font-bold tracking-wide rounded-md p-2 m-2 bg-green-500 hover:bg-green-700 hover:text-gray-200" onClick={calcular}>
+        <button className="w-1/4  text-slate-900 font-bold tracking-wide rounded-md p-2 m-2 bg-green-500 hover:bg-green-700 hover:text-gray-200" onClick={verificar}>
           Calcular
         </button>
       </div>
