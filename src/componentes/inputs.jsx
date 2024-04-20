@@ -101,7 +101,7 @@ const Inputs = () => {
           Calcular
         </button>
       </div>
-    {resultado}
+                     {{resultado}}
     </>
   );
 };
