@@ -13,6 +13,7 @@ const Inputs = () => {
     }if(porcentaje < 0 || precio < 0){
       setError("No pueden ser negativos");
     }
+    return sinInputPorcentaje(precio)
   }
   function sinInputPorcentaje(number) {
     var debePagar = 0;
@@ -87,7 +88,7 @@ const Inputs = () => {
           value={precio}
           onChange={(e) => setPrecio(e.target.value)}
         />
-        <button className="w-1/4  text-slate-900 font-bold tracking-wide  rounded-md p-2 m-2 bg-green-500 hover:bg-green-700 hover:text-gray-200">
+        <button className="w-1/4  text-slate-900 font-bold tracking-wide rounded-md p-2 m-2 bg-green-500 hover:bg-green-700 hover:text-gray-200" onClick={calcular}>
           Calcular
         </button>
       </div>
