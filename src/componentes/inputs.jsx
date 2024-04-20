@@ -10,18 +10,18 @@ const Inputs = () => {
   //   error.precio : ''
   // });
 
-  function verificar() {
-    if (porcentaje === '') {
-      setError(...error,error.porcentaje:"Por favor rellene el campo");
-    }if(porcentaje < 0){
-      setError(...error,error.porcentaje:"No puede ser negativo");
-    }if(precio === ''){
-      setError(...error,error.precio:'Por favor rellene el campo');
-    }if(precio < 0){
-      setError(...error,error.precio:'No puede ser negativo');
-    }
-    return sinInputPorcentaje(precio)
-  }
+  // function verificar() {
+  //   if (porcentaje === '') {
+  //     setError(...error,error.porcentaje:"Por favor rellene el campo");
+  //   }if(porcentaje < 0){
+  //     setError(...error,error.porcentaje:"No puede ser negativo");
+  //   }if(precio === ''){
+  //     setError(...error,error.precio:'Por favor rellene el campo');
+  //   }if(precio < 0){
+  //     setError(...error,error.precio:'No puede ser negativo');
+  //   }
+  //   return sinInputPorcentaje(precio)
+  // }
   function sinInputPorcentaje(number) {
     var debePagar = 0;
     var msj = "";
