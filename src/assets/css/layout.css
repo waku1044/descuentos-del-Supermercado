@@ -2,7 +2,7 @@
     display: grid;
     grid-template-areas: 'header' 'main' 'footer';
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 100px 2fr 100px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 
