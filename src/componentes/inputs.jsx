@@ -5,13 +5,20 @@ const Inputs = () => {
   const [hidden, setHidden] = useState(true);
   const [porcentaje, setPorcentaje] = useState('');
   const [precio, setPrecio] = useState('');
-  const [error, setError] = useState(false);
+  const [error, setError] = useState({
+    error.porcentaje :'',
+    error.precio : ''
+  });
 
   function verificar() {
-    if (porcentaje === '' || precio === '') {
-      setError("Por favor rellene todos los campos");
-    }if(porcentaje < 0 || precio < 0){
-      setError("No pueden ser negativos");
+    if (porcentaje === '') {
+      setError(...error,error.porcentaje:"Por favor rellene el campo");
+    }if(porcentaje < 0){
+      setError(...error,error.porcentaje:"No puede ser negativo");
+    }if(precio === ''){
+      setError(...error,error.precio:'Por favor rellene el campo');
+    }if(precio < 0){
+      setError(...error,error.precio:'No puede ser negativo');
     }
     return sinInputPorcentaje(precio)
   }
@@ -79,7 +86,7 @@ const Inputs = () => {
           value={porcentaje}
           onChange={(e) => setPorcentaje(e.target.value)}
         />
-        <p>{error && error} </p>
+        <p>{{error && error.porcentaje}} </p>
         <h4 className="text-md lg:text-2xl text-amber-100 bg-slate-800 py-4 px-5 rounded-3xl ">Ingrese el precio del producto</h4>
         <input
           type="number"
@@ -88,6 +95,7 @@ const Inputs = () => {
           value={precio}
           onChange={(e) => setPrecio(e.target.value)}
         />
+        <p>{{error && error.precio}}</p>
         <button className="w-1/4  text-slate-900 font-bold tracking-wide rounded-md p-2 m-2 bg-green-500 hover:bg-green-700 hover:text-gray-200" onClick={calcular}>
           Calcular
         </button>
