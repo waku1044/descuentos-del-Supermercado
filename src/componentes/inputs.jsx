@@ -39,9 +39,9 @@ const Inputs = () => {
   function sinInputPorcentaje() {
     var debePagar = 0;
     var msj = "";
-    console.log(porcentaje);
-    console.log(precio);
-    console.log(aplica)
+    // console.log(porcentaje);
+    // console.log(precio);
+    // console.log(aplica)
     switch (aplica) {
       case "trespordos":
         debePagar = precio * 2 ;
@@ -78,14 +78,15 @@ const Inputs = () => {
         } cada uno.`;
         break;
       case "descuento":
-        debePagar = (precio * porcentaje) / 100;
+        des = (precio * porcentaje) / 100;
+        debePagar = precio - des;
         msj = `El total a pagar es: $${debePagar}.`;
         break;
       default:
         msj = "Surgio un error en la aplicacion.";
     }
     setMostrar(msj);
-    console.log(msj);
+    // console.log(msj);
   }
   function evaluar(opcion) {
     if (opcion === "descuento") {
