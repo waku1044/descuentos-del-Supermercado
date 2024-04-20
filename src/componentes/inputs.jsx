@@ -106,6 +106,7 @@ const Inputs = () => {
       sinInputPorcentaje();
       
     } else {
+      console.log(response);
       setError(response);
     }
   }
@@ -144,7 +145,8 @@ const Inputs = () => {
           value={precio}
           onChange={(e) => setPrecio(e.target.value)}
         />
-        <button className="w-1/4  text-slate-900 font-bold tracking-wide  rounded-md p-2 m-2 bg-green-500 hover:bg-green-700 hover:text-gray-200">
+        {error.precio && <p className="text-black  bg-red-500 px-5 py-1 rounded-3xl">{error.precio}</p>}
+        <button className="w-1/4  text-slate-900 font-bold tracking-wide  rounded-md p-2 m-2 bg-green-500 hover:bg-green-700 hover:text-gray-200" onClick={handleSend}>
           Calcular
         </button>
 
