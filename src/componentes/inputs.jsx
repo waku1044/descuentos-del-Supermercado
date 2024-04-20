@@ -56,7 +56,7 @@ const Inputs = () => {
       default:
         msj = '<h2>Surgio un erro ren la aplicacion</h2>';
     }
-    return setResultado(msj);
+     setResultado(msj);
   }
   function evaluar(opcion) {
     if (opcion === "descuento") {
@@ -101,7 +101,7 @@ const Inputs = () => {
           Calcular
         </button>
       </div>
-                     {{resultado}}
+                     <div>{resultado}</div>
     </>
   );
 };
