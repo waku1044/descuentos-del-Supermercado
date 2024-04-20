@@ -1,7 +1,7 @@
 .header{
     background-image: url(../img/fondoHeader.jpg);
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100% 100%;
     background-position: center;
-    filter: grayscale(30%);
+    
 }

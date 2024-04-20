@@ -7,7 +7,7 @@ const header = () => {
         <>
             <header className="header flex  items-center">
             {/* <img src={logo} className='w-20' alt="Logo" /> */}
-                <h1 className="text-3xl font-bold  text-center ps-10">Descuentos en el Super</h1>
+                <h1 className="text-3xl font-bold text-slate-800  text-center ps-10">Descuentos en el Super</h1>
                 {/* <img src={logo} className='w-20' alt="Logo" /> */}
             </header>
         </>
