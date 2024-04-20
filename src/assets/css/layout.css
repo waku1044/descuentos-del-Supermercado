@@ -1,8 +1,13 @@
 .grid{
     display: grid;
     grid-template-areas: 'header' 'main' 'footer';
+<<<<<<< HEAD
    
     grid-template-rows: 1fr 3fr 1fr;
+=======
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 2fr 100px;
+>>>>>>> 4809cddc8216b3f06330ed543d740c970b7e5c37
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 

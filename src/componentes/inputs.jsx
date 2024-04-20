@@ -144,16 +144,13 @@ const Inputs = () => {
           value={precio}
           onChange={(e) => setPrecio(e.target.value)}
         />
-        {error.precio && <p className="text-black  bg-red-500 px-5 py-1 rounded-3xl">{error.precio}</p>}
-        <button
-          className="w-1/4  text-slate-900 font-bold tracking-wide  rounded-md p-2 m-2 bg-green-500 hover:bg-green-700 hover:text-gray-200"
-          onClick={handleSend}
-        >
+        <button className="w-1/4  text-slate-900 font-bold tracking-wide  rounded-md p-2 m-2 bg-green-500 hover:bg-green-700 hover:text-gray-200">
           Calcular
         </button>
 
         {mostrar && (<h2 className="text-md lg:text-2xl text-amber-100 bg-slate-800 py-4 px-5 rounded-3xl ">{mostrar}</h2>)}
       </div>
+
     </>
   );
 };
