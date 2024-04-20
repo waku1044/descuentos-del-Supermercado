@@ -5,6 +5,7 @@ const Inputs = () => {
   const [hidden, setHidden] = useState(true);
   const [porcentaje, setPorcentaje] = useState('');
   const [precio, setPrecio] = useState('');
+  const [resultado, setResultado] = useState('');
   // const [error, setError] = useState({
   //   error.porcentaje :'',
   //   error.precio : ''
@@ -55,7 +56,7 @@ const Inputs = () => {
       default:
         msj = '<h2>Surgio un erro ren la aplicacion</h2>';
     }
-    return msj;
+    return setResultado(msj);
   }
   function evaluar(opcion) {
     if (opcion === "descuento") {
@@ -96,11 +97,11 @@ const Inputs = () => {
           onChange={(e) => setPrecio(e.target.value)}
         />
 {/*         <p>{{error && error.precio}}</p> */}
-        <button className="w-1/4  text-slate-900 font-bold tracking-wide rounded-md p-2 m-2 bg-green-500 hover:bg-green-700 hover:text-gray-200">
+        <button className="w-1/4  text-slate-900 font-bold tracking-wide rounded-md p-2 m-2 bg-green-500 hover:bg-green-700 hover:text-gray-200" onClick={sinInputPorcentaje(precio)}>
           Calcular
         </button>
       </div>
-
+    {resultado}
     </>
   );
 };
